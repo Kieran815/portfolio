@@ -1,0 +1,4 @@
+Contact: mailto: kieran.milligan@gmail.com
+Acknowledgments: https://Kieran815.github.io/thanks.html
+Preferred-Languages: en
+Canonical: https://Kieran815.github.io/security.txt

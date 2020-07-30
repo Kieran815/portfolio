@@ -9,17 +9,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Kieran Milligan Resume Page">
         <meta name="keywords" content="hello, introduction, intro, full-stack, web developer, full-stack web developer">
+        <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
         <title>My Github Resume</title>
     </head>
 
     <body>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <header>
+            <span class="logo">My Website</span>
+            <a id="toggleMenu">Menu</a>
+            <nav>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="resume.html">Resume</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
         <main>
             <section>
             <h1>Kieran M. Milligan</h1>
@@ -94,7 +99,20 @@
             </section>
         </main>
 
-
+        <script>
+            var toggleMenu = document.getElementById('toggleMenu');
+            var nav = document.querySelector('nav');
+            toggleMenu.addEventListener(
+              'click',
+              function(){
+                if(nav.style.display=='block'){
+                  nav.style.display='none';
+                }else{
+                  nav.style.display='block';
+                }
+              }
+            );
+        </script>
     </body>
 
 </html>

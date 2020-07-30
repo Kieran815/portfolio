@@ -3,18 +3,36 @@
 <html>
 
     <head>
+        <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
         <title>My Github Thank You</title>
     </head>
 
     <body>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <header>
+            <span class="logo">My Website</span>
+            <a id="toggleMenu">Menu</a>
+            <nav>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="resume.html">Resume</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
         <p>Thank You for your Submission. I'll get back to you soon.</p>
     </body>
-
+    <script>
+        var toggleMenu = document.getElementById('toggleMenu');
+        var nav = document.querySelector('nav');
+        toggleMenu.addEventListener(
+          'click',
+          function(){
+            if(nav.style.display=='block'){
+              nav.style.display='none';
+            }else{
+              nav.style.display='block';
+            }
+          }
+        );
+    </script>
 </html>

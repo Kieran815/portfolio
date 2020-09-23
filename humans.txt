@@ -1,7 +1,7 @@
 /* TEAM */
 Your title: Kieran Milligan Portfolio Site
 Site: kieran.milligan@gmail.com, link to /contact.html
-Twitter: your Twitter username.
+Twitter: @NoLivesMatter42
 Location: Chicago, IL
 
 /* THANKS */
@@ -9,6 +9,6 @@ Name: Chad Svestisilee, Microtrain Technologies
 
 /* SITE */
 Last update: 20020/07/30
-Standards: HTML5, CSS3,..
-Components: will add on input
+Standards: HTML5, CSS3, JS
+Components: 
 Software: VSCode, Ubuntu, LAMP

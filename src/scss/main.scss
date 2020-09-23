@@ -10,6 +10,9 @@ body{
 }
 
 header {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.5em;
 	height: 50px;
 	background: #000;
 	color: #fff;
@@ -19,6 +22,8 @@ header {
 header .logo{
 	line-height: 50px;
 	font-weight: bold;
+	display: flex;
+	align-items: center;
 }
 
 main {
@@ -33,7 +38,9 @@ main {
 }
 
 nav {
-	float: right;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5em;
 }
 
 nav ul {
@@ -44,6 +51,7 @@ nav ul {
 
 nav ul li{
 	display: inline;
+	text-align: right;
 }
 
 nav ul li a,
@@ -57,7 +65,8 @@ nav ul li a:visited{
 }
 
 nav ul li a:hover{
-	background: #444;
+	background: #fff;
+	color: #000;
 }
 
 td {
@@ -139,7 +148,10 @@ textarea {
 
 
 #toggleMenu {
-  display: none;
+	display: none;
+	color: #fff;
+	display: flex;
+	align-items: center;
 }
 
 @media only screen and (max-width: 960px)  {
@@ -163,8 +175,8 @@ textarea {
 		display:none;
 		background: #000;
 		top: 50px;
-    left: 0;
-    right: 0;
+		left: 0;
+		right: 0;
 	}
 
 	nav ul li a,
@@ -172,11 +184,6 @@ textarea {
 	nav ul li a:visited{
 		display: block;
 		border-bottom: 1px solid #777;
-	}
-
-	textarea {
-		width: 200px;
-		height: 00px;
 	}
 
 }

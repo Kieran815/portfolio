@@ -3,29 +3,35 @@
 <html>
 
   <head>
-    
-    
+
     <meta lang='en'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    
+
     <link rel="author" href="humans.txt" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    <link href="./dist/css/main.min.css" type="text/css" rel="stylesheet">
-    
-    <title>Kieran Milligan | Resume</title>
 
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link href="./src/main.css" type="text/css" rel="stylesheet">
+
+    <meta name="description" content="Kieran M. Milligan Intro and Summary Page">
+    <meta name="keywords" content="hello, introduction, intro, full-stack, web developer, full-stack web developer, React, JAM, JAM Stack">
+
+    <title>Kieran Milligan | Web Developer</title>
+
+    <style>
+      body {
+        background-image: url('./images/Nebula.jpg')
+      }
+    </style>
   </head>
 
   <body>
@@ -38,9 +44,7 @@
         </svg>
         Kieran Milligan, Web Developer
       </span>
-      <a id="toggleMenu">
-        Menu
-      </a>
+      <a id="toggleMenu">Menu<a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -52,10 +56,10 @@
 
     <main class="container">
 
-      <section>
+      <section class="card">
         <h1 class="res-hl">Kieran Milligan</h1>
         <div class="res-hl-con">
-          <span>Chicago, IL</span>
+          <a href="https://www.google.com/maps/@41.9780324,-87.6462852,12z" target="_blank" rel="noopener">Chicago, IL</a>
           &#x25CF;
           <a href="mailto: kieran.milligan@gmail.com">kieran.milligan@gmail.com</a>
           &#x25CF;
@@ -63,7 +67,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="card">
         <h2 class="res-hl">Full Stack Web and Hybrid Mobile Applications Developer</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         <ul>
@@ -72,8 +76,8 @@
         </ul>
       </section>
 
-      <section>
-        <h3 class="res-hl">Core Competencies</h3>
+      <section class="card">
+        <h3 class="res-hl"><u>Core Competencies</u></h3>
         <div class="res-comps">
           <ul>
             <li>Contrary to popular belief,</li>
@@ -86,7 +90,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="card">
         <h3 class="res-hl"><u>Certifications / Technical Proficiencies</u></h3>
         <div class="res-certs">
           <table>
@@ -113,7 +117,7 @@
           </table>
       </section>
 
-      <section>
+      <section class="card">
         <h3 class="res-hl"><u>Professional Experience</u></h3>
         <div class="res-exp">
           <div class="res-co-date">
@@ -134,7 +138,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="card">
         <h3 class="res-hl"><u>Education</u></h3>
         <div>
           <p class="res-sch-date">
@@ -151,8 +155,6 @@
           <strong>Degree / Certification</strong>
         </div>
       </section>
-
-
       <br>
       <br>
     </main>

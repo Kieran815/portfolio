@@ -1,0 +1,187 @@
+body {
+  background-image: url("../images/Galaxy.jpg");
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#submit {
+  color: white;
+  border-color: white;
+  float: right;
+}
+
+#submit:hover {
+  color: yellow;
+  border-color: yellow;
+  background-color: transparent;
+}
+
+header {
+  height: 50px;
+  background: #000;
+  padding: 0 0.5rem 0 1rem;
+  color: #fff;
+  background: transparent;
+}
+
+header .logo {
+  line-height: 50px;
+  font-weight: bold;
+}
+
+main {
+  margin: 0 auto;
+  width: 960px;
+  max-width: 100%;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited {
+  display: inline-block;
+  padding: 0 0.5rem;
+  color: #fff;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background: #444;
+}
+
+a {
+  color: yellow;
+}
+
+a:hover {
+  color: fuchsia;
+}
+
+
+
+.avatar {
+  border-radius: 50%;
+  float: left;
+  margin-right: 1em;
+}
+
+.card {
+  background-color: transparent;
+  margin-bottom: 1.5em;
+}
+
+.intro {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.res-certs {
+  display: flex;
+  justify-content: left;
+}
+
+.res-certs > ul {
+  list-style-type: none;
+
+}
+
+.res-co-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.res-comps {
+  display: flex;
+}
+
+.res-comps > ul {
+  list-style-type: circle;
+}
+
+.res-hl {
+  display: flex;
+  justify-content: center;
+}
+
+.res-hl-con {
+  display: flex;
+  justify-content: space-around;
+}
+
+.res-sch-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+#con-intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#con-form {
+	background-color: #A9A9A9;
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	justify-content: center;
+	max-width: 75%;
+}
+
+#con-tainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+#toggleMenu {
+  display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  header {
+    position: relative;
+  }
+  #toggleMenu {
+    display: block;
+    float: right;
+    line-height: 50px;
+  }
+  header {
+    position: relative;
+  }
+  nav {
+    position: absolute;
+    display: none;
+    top: 50px;
+    left: 0;
+    right: 0;
+  }
+  nav ul li a,
+  nav ul li a:link,
+  nav ul li a:visited {
+    display: block;
+    border-bottom: 1px solid #777;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -7,22 +7,48 @@
     <meta lang='en'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    
+
+
     <link rel="author" href="humans.txt" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    <link href="./dist/css/main.min.css" type="text/css" rel="stylesheet">
-    <title>Kieran Milligan | Contact</title>
-  
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link href="./src/main.css" type="text/css" rel="stylesheet">
+
+    <meta name="description" content="Kieran M. Milligan Intro and Summary Page">
+    <meta name="keywords" content="hello, introduction, intro, full-stack, web developer, full-stack web developer, React, JAM, JAM Stack">
+    <style>
+      body {
+        position: relative;
+        background-image: url('./images/CitiesOrbit.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+      }
+
+      .card {
+        background: transparent;
+        padding: 5%;
+        border: 2px solid white;
+        margin-top: 15%;
+        min-height: 40%;
+        min-width: 60%;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+    <title>Kieran Milligan | Web Developer</title>
   </head>
 
   <body>
@@ -30,14 +56,11 @@
     <header>
       <span class="logo">
         <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-power" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z"/>
-          <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z"/>
+          <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z" />
+          <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" />
         </svg>
         Kieran Milligan, Web Developer
       </span>
-      <a id="toggleMenu">
-        Menu
-      </a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -46,18 +69,15 @@
         </ul>
       </nav>
     </header>
-      
-    <div class="container">    
+
+    <div class="container">
       <div>
         <h1>Contact Me!</h1>
         <p>I would love to discuss how we can work together.</p>
       </div>
 
       <div class="card">
-        <form
-        action="https://formspree.io/xoqkrqgq"
-        method="POST"
-        >
+        <form action="https://formspree.io/xoqkrqgq" method="POST">
           <input type="hidden" name="_next" value="//Kieran815.gitub.io/thanks.html">
           <div>
             <label for="name">Name:</label>
@@ -68,13 +88,13 @@
           <div>
             <label for="email">Email:</label>
             <br>
-            <input id="email" type="text" name="_replyto">  
+            <input id="email" type="text" name="_replyto">
           </div>
 
           <div>
             <label for="message">Message:</label>
             <br>
-            <textarea id="message" name="message" rows="4" cosl="50" placeholder="How can I help you?"></textarea>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="How can I help you?"></textarea>
           </div>
 
           <div>
@@ -82,9 +102,10 @@
           </div>
 
           <div>
-            <button class="btn btn-outline-dark" type="submit">Send</button>
+            <button class="btn btn-outline-dark" id="submit" type="submit">Send</button>
           </div>
-          <input class="btn btn-outline" type="hidden" name="_next" value="//kieran815.github.io/thanks.html">        </form>
+          <input class="btn btn-outline" type="hidden" name="_next" value="//kieran815.github.io/thanks.html">
+        </form>
       </div>
     </div>
 
@@ -93,11 +114,11 @@
       var nav = document.querySelector('nav');
       toggleMenu.addEventListener(
         'click',
-        function(){
-          if(nav.style.display=='block'){
-            nav.style.display='none';
-          }else{
-            nav.style.display='block';
+        function() {
+          if (nav.style.display == 'block') {
+            nav.style.display = 'none';
+          } else {
+            nav.style.display = 'block';
           }
         }
       );

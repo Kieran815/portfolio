@@ -23,12 +23,19 @@ header {
   background: #000;
   padding: 0 0.5rem 0 1rem;
   color: #fff;
-  background: transparent;
 }
 
 header .logo {
   line-height: 50px;
   font-weight: bold;
+}
+
+.text-error {
+  color: fuchsia;
+}
+
+label {
+  color: #99FFFF;
 }
 
 main {
@@ -59,6 +66,7 @@ nav ul li a:visited {
   color: #fff;
   line-height: 50px;
   text-decoration: none;
+  z-index: 1;
 }
 
 nav ul li a:hover {
@@ -168,19 +176,27 @@ a:hover {
   }
   header {
     position: relative;
+    z-index: 1
   }
+
   nav {
     position: absolute;
     display: none;
     top: 50px;
     left: 0;
     right: 0;
+    text-align: right;
   }
   nav ul li a,
   nav ul li a:link,
   nav ul li a:visited {
     display: block;
     border-bottom: 1px solid #777;
+    background-color: black;
+  }
+
+  nav ul li a:hover {
+    background-color: #777;
   }
 }
 

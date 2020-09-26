@@ -1,3 +1,55 @@
+<?php
+//Include non-vendor files
+require './core/About/src/Validation/Validate.php';
+
+//Declare Namespaces
+use About\Validation;
+use About\email;
+
+//Validate Declarations
+$valid = new About\Validation\Validate();
+$args = [
+  'name'=>FILTER_SANITIZE_STRING,
+  'subject'=>FILTER_SANITIZE_STRING,
+  'message'=>FILTER_SANITIZE_STRING,
+  'email'=>FILTER_SANITIZE_EMAIL,
+];
+
+$input = filter_input_array(INPUT_POST, $args);
+
+if(!empty($input)){
+  $valid->validation = [
+    'name'=>[[
+      'rule'=>'notEmpty',
+      'message'=>'Please enter your name'
+    ]],
+    'email'=>[[
+      'rule'=>'email',
+      'message'=>'Please enter a valid email'
+    ],[
+      'rule'=>'notEmpty',
+      'message'=>'Please enter an email'
+    ]],
+    'subject'=>[[
+      'rule'=>'notEmpty',
+      'message'=>'Please enter a subject'
+    ]],
+    'message'=>[[
+      'rule'=>'notEmpty',
+      'message'=>'Please add a message'
+    ]],
+  ];
+  $valid->check($input);
+}
+
+if(empty($valid->errors) && !empty($input)){
+  $message = "<div>Success!</div>";
+}else{
+  $message = "<div>Error!</div>";
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -48,7 +100,7 @@
         align-items: center;
       }
     </style>
-    <title>Kieran Milligan | Web Developer</title>
+    <title>Contact Me | Kieran Milligan</title>
   </head>
 
   <body>
@@ -61,53 +113,57 @@
         </svg>
         Kieran Milligan, Web Developer
       </span>
+      <a id="toggleMenu">Menu</a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
       <div>
         <h1>Contact Me!</h1>
         <p>I would love to discuss how we can work together.</p>
       </div>
 
+      <?php echo (!empty($message)?$message:null); ?>
+
       <div class="card">
-        <form action="https://formspree.io/xoqkrqgq" method="POST">
-          <input type="hidden" name="_next" value="//Kieran815.gitub.io/thanks.html">
+        <form action="contact.php" method="POST">
           <div>
             <label for="name">Name:</label>
-            <br>
-            <input id="name" type="text" name="name">
+            <div class="text-error"><?php echo $valid->error('name'); ?></div>
+            <input id="name" type="text" name="name" value="<?php echo $valid->userInput('name'); ?>">
+            <br />
           </div>
 
           <div>
             <label for="email">Email:</label>
-            <br>
-            <input id="email" type="text" name="_replyto">
+            <div class="text-error"><?php echo $valid->error('email'); ?></div>
+            <input id="email" type="text" name="email" value="<?php echo $valid->userInput('email'); ?>" placeholder="your_email@example.com">
           </div>
 
           <div>
             <label for="message">Message:</label>
-            <br>
-            <textarea id="message" name="message" rows="4" cols="50" placeholder="How can I help you?"></textarea>
+            <div class="text-error"><?php echo $valid->error('message'); ?></div>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="How can I help you?"><?php echo $valid->userInput('message'); ?></textarea>
           </div>
 
           <div>
-            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="subject" value="New submission!">
           </div>
 
           <div>
-            <button class="btn btn-outline-dark" id="submit" type="submit">Send</button>
+            <!-- <button class="btn btn-outline-dark" id="submit" type="submit">Send</button> -->
+            <input type="submit" value="Send">
+
           </div>
-          <input class="btn btn-outline" type="hidden" name="_next" value="//kieran815.github.io/thanks.html">
         </form>
       </div>
-    </div>
+    </main>
 
     <script>
       var toggleMenu = document.getElementById('toggleMenu');

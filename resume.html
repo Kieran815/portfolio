@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <link href="../src/main.css" type="text/css" rel="stylesheet">
+    <link href="./dist/css/main.min.css" type="text/css" rel="stylesheet" >
 
     <meta name="description" content="Kieran M. Milligan Intro and Summary Page">
     <meta name="keywords" content="hello, introduction, intro, full-stack, web developer, full-stack web developer, React, JAM, JAM Stack">
@@ -29,11 +29,12 @@
 
     <style>
       body {
-        background-image: url('../images/Nebula.jpg')
+        background-image: url('./images/Nebula.jpg')
       }
 
       .card {
         border: none;
+        background-color: rgba(0,0,0, 0.5);
       }
     </style>
   </head>
@@ -53,12 +54,12 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li><a href="public/contact.php">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="container" id="resumeContainer">
 
       <section class="card">
         <h1 class="res-hl">Kieran Milligan</h1>

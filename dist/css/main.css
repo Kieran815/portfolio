@@ -7,44 +7,36 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  max-width: 100vw;
-}
+  max-width: 100vw; }
 
 header {
   height: 50px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0 0.5rem 0 1rem;
-  color: #fff;
-}
+  color: #fff; }
 
 header .logo {
   line-height: 50px;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 label {
-  color: #99FFFF;
-}
+  color: #99FFFF; }
 
 main {
   margin: 0 auto;
   width: 960px;
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 nav {
-  float: right;
-}
+  float: right; }
 
 nav ul {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
+  list-style: none; }
 
 nav ul li {
-  display: inline;
-}
+  display: inline; }
 
 nav ul li a,
 nav ul li a:link,
@@ -54,33 +46,28 @@ nav ul li a:visited {
   color: #fff;
   line-height: 50px;
   text-decoration: none;
-  z-index: 1;
-}
+  z-index: 1; }
 
 nav ul li a:hover {
-  background: #444;
-}
+  background-color: rgba(211, 211, 211, 0.3);
+  color: yellow; }
 
 a {
-  color: yellow;
-}
+  color: yellow; }
 
 a:hover {
-  color: fuchsia;
-}
+  color: fuchsia; }
 
 .avatar {
   border-radius: 50%;
   float: left;
-  margin-right: 1em;
-}
+  margin-right: 1em; }
 
 .card {
   background: transparent;
   padding: 5%;
   border: 2px solid white;
-  margin-bottom: 1.5em;
-}
+  margin-bottom: 1.5em; }
 
 .contactForm {
   background: transparent;
@@ -91,121 +78,104 @@ a:hover {
   min-width: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  align-items: center; }
 
 .intro {
   height: 90vh;
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
 
 .res-certs {
   display: flex;
-  justify-content: left;
-}
+  justify-content: left; }
 
 .res-certs > ul {
-  list-style-type: none;
-
-}
+  list-style-type: none; }
 
 .res-co-date {
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .res-comps {
-  display: flex;
-}
+  display: flex; }
 
 .res-comps > ul {
-  list-style-type: circle;
-}
+  list-style-type: circle; }
 
 .res-hl {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .res-hl-con {
   display: flex;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 .res-sch-date {
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .text-error {
-  color: fuchsia;
-}
+  color: fuchsia; }
+
+#about_me {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 1em; }
 
 #Content {
-  margin: 3em auto 0 auto;
-
-}
+  margin: 3em auto 0 auto; }
 
 #con-intro {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 #con-form {
-	background-color: #A9A9A9;
-	display: flex;
-	flex-direction: column;
-	padding: 2em;
-	justify-content: center;
-	max-width: 75%;
-}
+  background-color: #A9A9A9;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  justify-content: center;
+  max-width: 75%; }
 
 #con-tainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 
 #Headline {
+  color: white;
   text-shadow: 5px -10px 10px black;
-}
+  background-color: rgba(211, 211, 211, 0.2);
+  border: none; }
 
 #logo {
   color: white;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 #submit {
   color: white;
   border-color: white;
-  float: left;
-}
+  float: left; }
 
 #submit:hover {
   color: yellow;
   border-color: yellow;
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 #toggleMenu {
-  display: none;
-}
+  display: none; }
 
 @media only screen and (max-width: 960px) {
-
   #toggleMenu {
     display: block;
     float: right;
-    line-height: 50px;
-  }
+    line-height: 50px; }
 
   header {
     position: relative;
-    z-index: 1
-  }
+    z-index: 1; }
 
   nav {
     position: absolute;
@@ -214,16 +184,11 @@ a:hover {
     left: 0;
     right: 0;
     text-align: right;
-  }
+    background-color: rgba(0, 0, 0, 0.5); }
+
   nav ul li a,
   nav ul li a:link,
   nav ul li a:visited {
-    display: block;
-    border-bottom: 1px solid #777;
-    background-color: black;
-  }
+    display: block; } }
 
-  nav ul li a:hover {
-    background-color: #777;
-  }
-}
+/*# sourceMappingURL=main.css.map */

@@ -72,14 +72,14 @@ if(empty($valid->errors) && !empty($input)){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <link href="../dist/css/main.min.css" type="text/css" rel="stylesheet" >
+    <link href="./dist/css/main.min.css" type="text/css" rel="stylesheet" >
 
     <meta name="description" content="Kieran M. Milligan Intro and Summary Page">
     <meta name="keywords" content="hello, introduction, intro, full-stack, web developer, full-stack web developer, React, JAM, JAM Stack">
     <style>
       body {
         position: relative;
-        background-image: url('../images/Galaxy.jpg');
+        background-image: url('./images/Galaxy.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 100vh;
@@ -87,6 +87,8 @@ if(empty($valid->errors) && !empty($input)){
 
       .card {
         background: transparent;
+        display: flex;
+        flex-direction: column;
         padding: 5%;
         border: 2px solid white;
         margin-top: 15%;
@@ -116,8 +118,8 @@ if(empty($valid->errors) && !empty($input)){
       <a id="toggleMenu">Menu</a>
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li><a href="contact.php">Contact</a></li>
         </ul>
       </nav>
@@ -132,7 +134,11 @@ if(empty($valid->errors) && !empty($input)){
       <?php echo (!empty($message)?$message:null); ?>
 
       <div class="card">
+
         <form action="contact.php" method="POST">
+
+          <input type="hidden" name="subject" value="New submission!">
+
           <div>
             <label for="name">Name:</label>
             <div class="text-error"><?php echo $valid->error('name'); ?></div>
@@ -149,18 +155,15 @@ if(empty($valid->errors) && !empty($input)){
           <div>
             <label for="message">Message:</label>
             <div class="text-error"><?php echo $valid->error('message'); ?></div>
-            <textarea id="message" name="message" rows="4" cols="50" placeholder="How can I help you?"><?php echo $valid->userInput('message'); ?></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="How can I help you?"><?php echo $valid->userInput('message'); ?></textarea>
           </div>
 
-          <div>
-            <input type="hidden" name="subject" value="New submission!">
-          </div>
 
           <div>
             <!-- <button class="btn btn-outline-dark" id="submit" type="submit">Send</button> -->
             <input type="submit" value="Send">
-
           </div>
+
         </form>
       </div>
     </main>

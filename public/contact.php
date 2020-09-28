@@ -137,7 +137,7 @@ if(empty($valid->errors) && !empty($input)){
         <div>
           <label for="name">Name:</label>
           <div class="text-error"><?php echo $valid->error('name'); ?></div>
-          <input id="name" type="text" name="name" value="<?php echo $valid->userInput('name'); ?>" placeholder="ex: Abin Sur">
+          <input id="name" type="text" name="name" value="<?php echo $valid->userInput('name'); ?>" placeholder="Jesse Doe">
           <br />
         </div>
 

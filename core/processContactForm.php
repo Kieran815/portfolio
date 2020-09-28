@@ -58,5 +58,5 @@ if(!empty($input)){
   }else{
     $message = "<div class=\"message-error\">Your form has errors!</div>";
   }
-  
+
 }

@@ -1,3 +1,16 @@
+a {
+  color: yellow;
+}
+
+a:hover {
+  color: fuchsia;
+  cursor: pointer;
+}
+
+a:visited {
+  color: rgb(50,205,50);
+}
+
 body {
   position: relative;
   background-image: url("../images/Galaxy.jpg");
@@ -20,6 +33,11 @@ header {
 header .logo {
   line-height: 50px;
   font-weight: bold;
+}
+
+input {
+  width: 90%;
+  border: none;
 }
 
 label {
@@ -62,14 +80,10 @@ nav ul li a:hover {
   color: yellow;
 }
 
-a {
-  color: yellow;
+textarea {
+  width: 90%;
+  border: none;
 }
-
-a:hover {
-  color: fuchsia;
-}
-
 .avatar {
   border-radius: 50%;
   float: left;
@@ -79,20 +93,20 @@ a:hover {
 .card {
   background: transparent;
   padding: 5%;
-  border: 2px solid white;
   margin-bottom: 1.5em;
 }
 
 .contactForm {
-  background: transparent;
-  padding: 5%;
+  background-color: rgba(0,0,0,0.4);
+  padding: 10%;
   border: 2px solid white;
-  margin-top: 15%;
-  min-height: 40%;
-  min-width: 60%;
+  margin: 10% auto 10% auto;
+  min-height: 50%;
+  min-width: 80%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  border-radius: 5%;
 }
 
 .intro {
@@ -140,7 +154,7 @@ a:hover {
 }
 
 .text-error {
-  color: fuchsia;
+  color: yellow;
 }
 
 #about_me {
@@ -155,25 +169,9 @@ a:hover {
 }
 
 #con-intro {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#con-form {
-	background-color: #A9A9A9;
-	display: flex;
-	flex-direction: column;
-	padding: 2em;
-	justify-content: center;
-	max-width: 75%;
-}
-
-#con-tainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  background-color: rgba(0,0,0, 0.4);
+  margin-top: 1.5em;
+  padding: 1em;
 }
 
 #Headline {
@@ -186,18 +184,6 @@ a:hover {
 #logo {
   color: white;
   text-decoration: none;
-}
-
-#submit {
-  color: white;
-  border-color: white;
-  float: left;
-}
-
-#submit:hover {
-  color: yellow;
-  border-color: yellow;
-  background-color: transparent;
 }
 
 #toggleMenu {

@@ -44,9 +44,10 @@ if(!empty($input)){
 
 if(empty($valid->errors) && !empty($input)){
   $message = "<div>Success!</div>";
-}else{
-  $message = "<div>Error!</div>";
 }
+// else{
+//   $message = "<div>Error!</div>";
+// }
 
 ?>
 
@@ -85,21 +86,16 @@ if(empty($valid->errors) && !empty($input)){
         min-height: 100vh;
       }
 
-      .card {
-        background: transparent;
-        display: flex;
-        flex-direction: column;
-        padding: 5%;
-        border: 2px solid white;
-        margin-top: 15%;
-        min-height: 40%;
-        min-width: 60%;
-      }
-
       .container {
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      textarea,
+      input {
+        background-color: rgba(0,0,0, 0.75);
+        color: white;
       }
     </style>
     <title>Contact Me | Kieran Milligan</title>
@@ -126,46 +122,45 @@ if(empty($valid->errors) && !empty($input)){
     </header>
 
     <main class="container">
-      <div>
+
+      <div id="con-intro">
         <h1>Contact Me!</h1>
         <p>I would love to discuss how we can work together.</p>
       </div>
 
       <?php echo (!empty($message)?$message:null); ?>
 
-      <div class="card">
+      <form class="contactForm" action="contact.php" method="POST">
 
-        <form action="contact.php" method="POST">
+        <input type="hidden" name="subject" value="New submission!">
 
-          <input type="hidden" name="subject" value="New submission!">
+        <div>
+          <label for="name">Name:</label>
+          <div class="text-error"><?php echo $valid->error('name'); ?></div>
+          <input id="name" type="text" name="name" value="<?php echo $valid->userInput('name'); ?>" placeholder="ex: Abin Sur">
+          <br />
+        </div>
 
-          <div>
-            <label for="name">Name:</label>
-            <div class="text-error"><?php echo $valid->error('name'); ?></div>
-            <input id="name" type="text" name="name" value="<?php echo $valid->userInput('name'); ?>">
-            <br />
-          </div>
+        <div>
+          <label for="email">Email:</label>
+          <div class="text-error"><?php echo $valid->error('email'); ?></div>
+          <input id="email" type="text" name="email" value="<?php echo $valid->userInput('email'); ?>" placeholder="your_email@example.com">
+        </div>
 
-          <div>
-            <label for="email">Email:</label>
-            <div class="text-error"><?php echo $valid->error('email'); ?></div>
-            <input id="email" type="text" name="email" value="<?php echo $valid->userInput('email'); ?>" placeholder="your_email@example.com">
-          </div>
-
-          <div>
-            <label for="message">Message:</label>
-            <div class="text-error"><?php echo $valid->error('message'); ?></div>
-            <textarea id="message" name="message" rows="4" placeholder="How can I help you?"><?php echo $valid->userInput('message'); ?></textarea>
-          </div>
+        <div>
+          <label for="message">Message:</label>
+          <div class="text-error"><?php echo $valid->error('message'); ?></div>
+          <textarea id="message" name="message" rows="4" placeholder="How can I help you?"><?php echo $valid->userInput('message'); ?></textarea>
+        </div>
 
 
-          <div>
-            <!-- <button class="btn btn-outline-dark" id="submit" type="submit">Send</button> -->
-            <input type="submit" value="Send">
-          </div>
+        <div>
+          <!-- <button class="btn btn-outline-dark" id="submit" type="submit">Send</button> -->
+          <input id="con-submit" type="submit" value="Send">
+        </div>
 
-        </form>
-      </div>
+      </form>
+
     </main>
 
     <script>

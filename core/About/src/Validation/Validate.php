@@ -34,6 +34,9 @@ class Validate{
         $this->errors[$field] = $rule;
       }
     }
+    if(count($this->errors) == 0){
+      $this->errors = [];
+    }
   }
 
   /**

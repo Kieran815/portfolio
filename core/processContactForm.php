@@ -46,8 +46,8 @@ if(!empty($input)){
   $result = $mgClient->messages()->send($domain,
     array (
       'from'    => "{$input['name']} <{$input['email']}>",
-      'to'      => 'Your Name <name@your-email.com>',
-      'subject' => 'Hello Your-Name',
+      'to'      => 'Kieran <kieran.milligan@gmail.com>',
+      'subject' => 'New Email from Portfolio',
       'text'    => $input['message']
     )
   );

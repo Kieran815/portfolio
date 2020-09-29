@@ -4,7 +4,6 @@ require '../core/About/src/Validation/Validate.php';
 
 //Declare Namespaces
 use About\Validation;
-use About\email;
 
 //Validate Declarations
 $valid = new About\Validation\Validate();
